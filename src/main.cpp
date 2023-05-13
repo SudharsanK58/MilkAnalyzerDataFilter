@@ -1,11 +1,14 @@
 #include <Arduino.h>
 #include "BluetoothSerial.h"
+#include "TPrinter.h"
+
 BluetoothSerial SerialBT;
-String previousData = "";  // Variable to store previous data
+String previousData = "";  
+
 void setup() {
-  Serial.begin(9600);   // Start the serial monitor
-  Serial2.begin(2400);  // Start Serial2 with baud rate of 2400
-  SerialBT.begin("ESP32_Robojax"); //Bluetooth device name
+  Serial.begin(9600);   
+  Serial2.begin(2400);  
+  SerialBT.begin("ESP32"); 
   Serial.println("The device started, now you can pair it with bluetooth!");
 }
 
